@@ -7,10 +7,10 @@ API_URL = "http://127.0.0.1:5000/data"
 
 def simulate_sensor_data():
     """
-    Simulates MPU-6050 data like it would come from Arduino via Bluetooth.
-    In production, this would read from a real Serial/BLE connection.
+    Une simulation de données MPU-6050 comme si elle venait d'un Arduino via Bluetooth.
+    Dans un scénario de prod, ceci lirait les données comme une connection Serial/BLE réelle.
     """
-    bad_posture = random.random() < 0.3  # 30% chance of bad posture
+    bad_posture = random.random() < 0.3  # Ici, la chance d'une mauvaise posture est de 30%
 
     if bad_posture:
         ax = random.randint(9000, 12000) * random.choice([-1, 1])
@@ -19,7 +19,7 @@ def simulate_sensor_data():
         ax = random.randint(-3000, 3000)
         ay = random.randint(-3000, 3000)
 
-    az = random.randint(14000, 18000)  # Z axis ~16384 at rest (1g)
+    az = random.randint(14000, 18000)  # Z axis ~16384 en repos (1g)
     gx = random.randint(-500, 500)
     gy = random.randint(-500, 500)
     gz = random.randint(-500, 500)
@@ -30,14 +30,14 @@ def send_data(data):
     try:
         response = requests.post(API_URL, json=data)
         result = response.json()
-        print(f"Sent: ax={data['ax']}, ay={data['ay']}, az={data['az']} → Posture: {result['posture']}")
+        print(f"Envoyé: ax={data['ax']}, ay={data['ay']}, az={data['az']} → Posture: {result['posture']}")
     except Exception as e:
-        print(f"Error sending data: {e}")
+        print(f"Erreur à l'envoi des données: {e}")
 
 if __name__ == '__main__':
-    print("Gateway started — simulating Bluetooth data stream...")
-    print("Press Ctrl+C to stop\n")
+    print("Démarrage du Gateway — Simulation des données Bluetooth en cours...")
+    print("Ctrl+C - Arreter l'application\n")
     while True:
         data = simulate_sensor_data()
         send_data(data)
-        time.sleep(1)  # Send every second
+        time.sleep(1)  # Envoi chaque seconde

@@ -22,7 +22,6 @@
         radial-gradient(ellipse 120% 80% at 50% 0%, #5b9bd5 0%, #2a6496 60%, #1a4a7a 100%);
     }
 
-    /* TASKBAR */
     #taskbar {
       position: fixed;
       bottom: 0; left: 0; right: 0;
@@ -98,14 +97,12 @@
       color: white; font-size: 11px;
     }
 
-    /* WINDOW */
     #window {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 30px;
       display: flex; flex-direction: column;
     }
 
-    /* TITLE BAR */
     #titlebar {
       height: 28px;
       background: linear-gradient(to bottom,
@@ -429,17 +426,14 @@
       } catch(e) { console.error(e); }
     }
 
-    // POLLING CONTROL
     let paused = false;
     let pollInterval = setInterval(fetchData, 1000);
     fetchData();
 
-    // REFRESH
     document.getElementById("btn-refresh").addEventListener("click", () => {
       fetchData();
     });
 
-    // PAUSE / RESUME
     document.getElementById("btn-pause").addEventListener("click", () => {
       const btn = document.getElementById("btn-pause");
       if (!paused) {
@@ -456,7 +450,6 @@
       }
     });
 
-    // CLEAR
     document.getElementById("btn-clear").addEventListener("click", () => {
       labels.length = 0;
       accelChart.data.datasets.forEach(ds => ds.data = []);
@@ -471,7 +464,6 @@
       document.getElementById("last-update").textContent = "--:--:--";
     });
 
-    // EXPORT CSV
     document.getElementById("btn-export").addEventListener("click", async () => {
       try {
         const res = await fetch("http://127.0.0.1:5000/data");

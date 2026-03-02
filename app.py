@@ -5,9 +5,8 @@ import sqlite3
 import datetime
 
 app = Flask(__name__)
-CORS(app)  # Allows dashboard to talk to API
+CORS(app)
 
-# --- Database Setup ---
 def init_db():
     conn = sqlite3.connect('sensor_data.db')
     cursor = conn.cursor()
@@ -23,9 +22,7 @@ def init_db():
     conn.commit()
     conn.close()
 
-# --- Posture Detection Logic ---
 def detect_posture(ax, ay, az):
-    # If tilt on X or Y axis exceeds threshold → bad posture
     if abs(ax) > 8000 or abs(ay) > 8000:
         return "Bad Posture"
     return "Good Posture"
