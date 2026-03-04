@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+firmware = 'build/Challenge.ino.hex'
+elf = 'build/Challenge.ino.elf'
+rfc2217ServerPort = 4000
