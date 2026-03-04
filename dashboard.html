@@ -18,147 +18,86 @@
 
     body {
       background: #2a6496;
-      background-image:
-        radial-gradient(ellipse 120% 80% at 50% 0%, #5b9bd5 0%, #2a6496 60%, #1a4a7a 100%);
+      background-image: radial-gradient(ellipse 120% 80% at 50% 0%, #5b9bd5 0%, #2a6496 60%, #1a4a7a 100%);
     }
 
     #taskbar {
       position: fixed;
-      bottom: 0; left: 0; right: 0;
-      height: 30px;
-      background: linear-gradient(to bottom,
-        #1f5fbc 0%, #1a52a8 3%,
-        #1c5ab8 6%, #1650aa 94%,
-        #0d3d8f 97%, #1040a0 100%);
-      display: flex;
-      align-items: center;
-      padding: 0 2px;
-      border-top: 1px solid #0a2d7a;
-      z-index: 9999;
+      bottom: 0; left: 0; right: 0; height: 30px;
+      background: linear-gradient(to bottom, #1f5fbc 0%, #1a52a8 3%, #1c5ab8 6%, #1650aa 94%, #0d3d8f 97%, #1040a0 100%);
+      display: flex; align-items: center; padding: 0 2px;
+      border-top: 1px solid #0a2d7a; z-index: 9999;
       box-shadow: inset 0 1px 0 #3a7ad8;
     }
 
     #start-btn {
-      height: 24px;
-      padding: 0 10px 0 6px;
-      background: linear-gradient(to bottom,
-        #61b54b 0%, #53a53d 8%,
-        #4a9e34 50%, #439030 92%, #3a8028 100%);
-      border: 1px solid #2a6020;
-      border-radius: 12px;
-      color: white;
-      font-family: Tahoma, sans-serif;
-      font-size: 13px;
-      font-weight: bold;
-      font-style: italic;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
+      height: 24px; padding: 0 10px 0 6px;
+      background: linear-gradient(to bottom, #61b54b 0%, #53a53d 8%, #4a9e34 50%, #439030 92%, #3a8028 100%);
+      border: 1px solid #2a6020; border-radius: 12px; color: white;
+      font-family: Tahoma, sans-serif; font-size: 13px; font-weight: bold; font-style: italic;
+      cursor: pointer; display: flex; align-items: center; gap: 5px;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
       box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.3);
-      letter-spacing: 0.3px;
     }
     #start-btn:hover { filter: brightness(1.1); }
 
     .start-orb {
       width: 20px; height: 20px;
-      background: radial-gradient(circle at 40% 35%,
-        #ffffff 0%, #aad4f5 30%, #4a90d9 60%, #1a5fb8 100%);
-      border-radius: 50%;
-      border: 1px solid #0d3a8a;
-      box-shadow: 0 0 4px rgba(0,0,0,0.4);
-      flex-shrink: 0;
+      background: radial-gradient(circle at 40% 35%, #ffffff 0%, #aad4f5 30%, #4a90d9 60%, #1a5fb8 100%);
+      border-radius: 50%; border: 1px solid #0d3a8a;
+      box-shadow: 0 0 4px rgba(0,0,0,0.4); flex-shrink: 0;
     }
 
     .taskbar-btn {
-      height: 22px;
-      padding: 0 8px;
+      height: 22px; padding: 0 8px;
       background: linear-gradient(to bottom, #2a72d4 0%, #1e5fbf 50%, #1a54b0 100%);
-      border: 1px solid #0d3a8a;
-      border-radius: 2px;
-      color: white;
-      font-family: Tahoma, sans-serif;
-      font-size: 11px;
-      cursor: pointer;
-      display: flex; align-items: center; gap: 4px;
-      margin-left: 4px;
+      border: 1px solid #0d3a8a; border-radius: 2px; color: white;
+      font-family: Tahoma, sans-serif; font-size: 11px; cursor: pointer;
+      display: flex; align-items: center; gap: 4px; margin-left: 4px;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
       text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     }
 
     #tray {
-      margin-left: auto;
-      height: 100%;
-      padding: 0 8px;
+      margin-left: auto; height: 100%; padding: 0 8px;
       background: linear-gradient(to bottom, #1245a0 0%, #0e3d90 50%, #0a3588 100%);
       border-left: 1px solid #0a2d7a;
       display: flex; align-items: center; gap: 8px;
       color: white; font-size: 11px;
     }
 
-    #window {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 30px;
-      display: flex; flex-direction: column;
-    }
+    #window { position: absolute; top: 0; left: 0; right: 0; bottom: 30px; display: flex; flex-direction: column; }
 
     #titlebar {
       height: 28px;
-      background: linear-gradient(to bottom,
-        #5aa0f0 0%, #3080e8 3%,
-        #1c68d8 6%, #1460cc 90%,
-        #0e50b8 97%, #1458c0 100%);
-      display: flex; align-items: center;
-      padding: 0 4px 0 6px;
-      border-bottom: 1px solid #0a3898;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-      flex-shrink: 0;
+      background: linear-gradient(to bottom, #5aa0f0 0%, #3080e8 3%, #1c68d8 6%, #1460cc 90%, #0e50b8 97%, #1458c0 100%);
+      display: flex; align-items: center; padding: 0 4px 0 6px;
+      border-bottom: 1px solid #0a3898; box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); flex-shrink: 0;
     }
 
     #titlebar-text {
       color: white; font-size: 12px; font-weight: bold;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-      flex: 1; margin-left: 6px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6); flex: 1; margin-left: 6px;
     }
 
     .tb-btns { display: flex; gap: 2px; }
-
     .tb-btn {
-      width: 21px; height: 21px;
-      border-radius: 3px;
-      border: 1px solid rgba(0,0,0,0.4);
+      width: 21px; height: 21px; border-radius: 3px; border: 1px solid rgba(0,0,0,0.4);
       cursor: pointer; font-size: 10px; font-weight: bold;
       display: flex; align-items: center; justify-content: center;
       text-shadow: 0 1px 1px rgba(0,0,0,0.5);
     }
-    .tb-min, .tb-max {
-      background: linear-gradient(to bottom, #5aa0f0 0%, #3080e8 30%, #1c68d8 100%);
-      color: white; box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-    }
-    .tb-close {
-      background: linear-gradient(to bottom, #f05050 0%, #d83030 30%, #c02020 100%);
-      color: white; box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-    }
+    .tb-min, .tb-max { background: linear-gradient(to bottom, #5aa0f0 0%, #3080e8 30%, #1c68d8 100%); color: white; box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); }
+    .tb-close { background: linear-gradient(to bottom, #f05050 0%, #d83030 30%, #c02020 100%); color: white; box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); }
     .tb-btn:hover { filter: brightness(1.15); }
 
-    #menubar {
-      height: 22px; background: #ece9d8;
-      border-bottom: 1px solid #aca899;
-      display: flex; align-items: center; padding: 0 4px;
-      flex-shrink: 0;
-    }
-    .menu-item {
-      padding: 2px 8px; border-radius: 2px; cursor: default; font-size: 11px;
-    }
+    #menubar { height: 22px; background: #ece9d8; border-bottom: 1px solid #aca899; display: flex; align-items: center; padding: 0 4px; flex-shrink: 0; }
+    .menu-item { padding: 2px 8px; border-radius: 2px; cursor: default; font-size: 11px; }
     .menu-item:hover { background: #316ac5; color: white; }
 
     #toolbar {
-      height: 26px;
-      background: linear-gradient(to bottom, #f5f4ea, #e8e5d5);
-      border-bottom: 1px solid #aca899;
-      display: flex; align-items: center; padding: 0 6px; gap: 3px;
-      flex-shrink: 0;
+      height: 26px; background: linear-gradient(to bottom, #f5f4ea, #e8e5d5);
+      border-bottom: 1px solid #aca899; display: flex; align-items: center; padding: 0 6px; gap: 3px; flex-shrink: 0;
     }
     .tool-btn {
       height: 20px; padding: 0 8px;
@@ -172,48 +111,45 @@
 
     #content {
       flex: 1; background: #ece9d8;
-      display: grid;
-      grid-template-rows: auto auto 1fr auto;
-      gap: 5px; padding: 5px;
-      overflow: hidden;
+      display: grid; grid-template-rows: auto auto 1fr auto;
+      gap: 5px; padding: 5px; overflow: hidden;
     }
 
-    .xp-panel {
-      background: white;
-      border: 1px solid #7a9eb8;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.8), 1px 1px 3px rgba(0,0,0,0.15);
-    }
+    .xp-panel { background: white; border: 1px solid #7a9eb8; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.8), 1px 1px 3px rgba(0,0,0,0.15); }
     .xp-panel-hdr {
       height: 20px;
       background: linear-gradient(to bottom, #6ba0e8 0%, #2a70d8 40%, #1a5cc8 100%);
       display: flex; align-items: center; padding: 0 8px; gap: 5px;
       color: white; font-weight: bold; font-size: 11px;
-      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-      border-bottom: 1px solid #0a3898;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5); border-bottom: 1px solid #0a3898;
     }
     .xp-panel-body { padding: 5px 8px; }
 
     #status-row {
-      display: flex; align-items: center; gap: 10px;
-      padding: 4px 6px;
-      background: #f5f4ea;
-      border: 2px groove #c0bba8;
+      display: flex; align-items: center; gap: 10px; padding: 4px 6px;
+      background: #f5f4ea; border: 2px groove #c0bba8;
     }
+
     .led {
-      width: 18px; height: 18px; border-radius: 50%;
+      width: 22px; height: 22px; border-radius: 50%;
       border: 2px solid #555; flex-shrink: 0; position: relative;
     }
     .led::after {
-      content: ''; position: absolute;
-      top: 2px; left: 2px; width: 6px; height: 4px;
-      border-radius: 50%; background: rgba(255,255,255,0.7);
+      content: ''; position: absolute; top: 2px; left: 3px;
+      width: 7px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.7);
     }
-    .led.good { background: radial-gradient(circle at 35% 30%, #88ff88, #00bb00 60%, #006600); box-shadow: 0 0 5px #00cc00; }
-    .led.bad  { background: radial-gradient(circle at 35% 30%, #ff8888, #cc0000 60%, #880000); box-shadow: 0 0 5px #ff0000; }
-    #posture-label { font-size: 13px; font-weight: bold; }
-    #posture-label.good { color: #006600; }
-    #posture-label.bad  { color: #cc0000; }
-    #posture-sub { font-size: 10px; color: #666; }
+    .led.debout { background: radial-gradient(circle at 35% 30%, #88ff88, #00bb00 60%, #006600); box-shadow: 0 0 6px #00cc00; }
+    .led.assis  { background: radial-gradient(circle at 35% 30%, #ffe088, #ddaa00 60%, #aa7700); box-shadow: 0 0 6px #ddaa00; }
+    .led.couche { background: radial-gradient(circle at 35% 30%, #ff8888, #cc0000 60%, #880000); box-shadow: 0 0 6px #ff0000; }
+    .led.inconnu { background: radial-gradient(circle at 35% 30%, #cccccc, #888888 60%, #555555); box-shadow: 0 0 6px #999; }
+
+    #posture-label { font-size: 14px; font-weight: bold; }
+    #posture-label.debout  { color: #006600; }
+    #posture-label.assis   { color: #aa7700; }
+    #posture-label.couche  { color: #cc0000; }
+    #posture-label.inconnu { color: #666666; }
+
+    #posture-sub { font-size: 10px; color: #666; margin-top: 2px; }
     #last-update-wrap { margin-left: auto; text-align: right; }
     #last-update-wrap .lbl { font-size: 10px; color: #888; }
     #last-update { font-size: 11px; font-weight: bold; color: #003087; }
@@ -223,7 +159,7 @@
       background: #f0efe4;
       border-top: 1px solid #9a9a9a; border-left: 1px solid #9a9a9a;
       border-bottom: 1px solid #e0ddd0; border-right: 1px solid #e0ddd0;
-      padding: 4px 4px; text-align: center;
+      padding: 4px; text-align: center;
     }
     .s-val { display: block; font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; color: #00008b; }
     .s-lbl { display: block; font-size: 10px; color: #555; margin-top: 1px; }
@@ -233,18 +169,8 @@
     .chart-wrap { flex: 1; padding: 4px; position: relative; min-height: 0; }
     canvas { display: block; }
 
-    #statusbar {
-      height: 20px; background: #ece9d8;
-      border-top: 1px solid #aca899;
-      display: flex; align-items: center;
-      flex-shrink: 0;
-    }
-    .sb-pane {
-      height: 100%; padding: 0 8px;
-      border-right: 1px solid #aca899;
-      display: flex; align-items: center;
-      font-size: 10px; color: #333; gap: 4px;
-    }
+    #statusbar { height: 20px; background: #ece9d8; border-top: 1px solid #aca899; display: flex; align-items: center; flex-shrink: 0; }
+    .sb-pane { height: 100%; padding: 0 8px; border-right: 1px solid #aca899; display: flex; align-items: center; font-size: 10px; color: #333; gap: 4px; }
     .sb-pane:first-child { flex: 1; }
     .sb-dot { width: 6px; height: 6px; border-radius: 50%; background: #00aa00; }
   </style>
@@ -253,8 +179,8 @@
 
   <div id="window">
     <div id="titlebar">
-      <span style="font-size:14px;">🏃</span>
-      <span id="titlebar-text">Challenge Objets Connectés K Posture Monitor — Sensor Dashboard</span>
+      <span style="font-size:14px;">🦺</span>
+      <span id="titlebar-text">SmartPosture — CorpSafe v1 — Sensor Dashboard</span>
       <div class="tb-btns">
         <button class="tb-btn tb-min">─</button>
         <button class="tb-btn tb-max">□</button>
@@ -263,32 +189,33 @@
     </div>
 
     <div id="menubar">
-      <span class="menu-item">Fichier</span>
-      <span class="menu-item">Voir</span>
-      <span class="menu-item">Senseur</span>
-      <span class="menu-item">Outils</span>
-      <span class="menu-item">Aide</span>
+      <span class="menu-item">File</span>
+      <span class="menu-item">View</span>
+      <span class="menu-item">Sensor</span>
+      <span class="menu-item">Tools</span>
+      <span class="menu-item">Help</span>
     </div>
 
     <div id="toolbar">
-      <button class="tool-btn" id="btn-refresh">📥 Récupérer</button>
+      <button class="tool-btn" id="btn-refresh">⟳ Refresh</button>
       <div class="tool-sep"></div>
       <button class="tool-btn" id="btn-pause">⏸ Pause</button>
-      <button class="tool-btn" id="btn-clear">🗑 Réinitialiser</button>
+      <button class="tool-btn" id="btn-clear">🗑 Clear</button>
       <div class="tool-sep"></div>
-      <button class="tool-btn" id="btn-export">📋 Exporter CSV</button>
+      <button class="tool-btn" id="btn-export">📋 Export CSV</button>
     </div>
 
     <div id="content">
 
+      <!-- Posture Status -->
       <div class="xp-panel">
-        <div class="xp-panel-hdr">📡 Statut de la posture</div>
+        <div class="xp-panel-hdr"> État Postural — Détection Temps Réel</div>
         <div class="xp-panel-body">
           <div id="status-row">
-            <div id="led" class="led good"></div>
+            <div id="led" class="led debout"></div>
             <div>
-              <div id="posture-label" class="good">Bonne Posture ✅</div>
-              <div id="posture-sub">Détection en temps réel à partir d'un seuil de détection de l'accéleromètre (±8000)</div>
+              <div id="posture-label" class="debout">Debout</div>
+              <div id="posture-sub">Détection via roll / pitch (atan2) — MPU-6050</div>
             </div>
             <div id="last-update-wrap">
               <div class="lbl">Dernière mise à jour</div>
@@ -298,8 +225,9 @@
         </div>
       </div>
 
+      <!-- Sensor Values -->
       <div class="xp-panel">
-        <div class="xp-panel-hdr">Lecture du Live Sensor</div>
+        <div class="xp-panel-hdr">Valeurs Capteur en Direct</div>
         <div class="xp-panel-body">
           <div id="sensor-grid">
             <div class="s-cell"><span class="s-val" id="val-ax">--</span><span class="s-lbl">Accel X</span></div>
@@ -312,9 +240,10 @@
         </div>
       </div>
 
+      <!-- Charts -->
       <div id="charts-row">
         <div class="xp-panel chart-panel">
-          <div class="xp-panel-hdr">Acceleromètre (X / Y / Z)</div>
+          <div class="xp-panel-hdr">Accéléromètre (X / Y / Z)</div>
           <div class="chart-wrap xp-panel-body">
             <canvas id="accelChart"></canvas>
           </div>
@@ -327,19 +256,21 @@
         </div>
       </div>
 
+      <!-- Status Bar -->
       <div id="statusbar">
-        <div class="sb-pane"><span class="sb-dot"></span>&nbsp;Connecté au serveur http://127.0.0.1:5000 &nbsp;|&nbsp; Récupération de données chaque seconde &nbsp;|&nbsp; Bluetooth: Simulé (PoC)</div>
-        <div class="sb-pane" id="reading-count">Lectures: 0</div>
+        <div class="sb-pane"><span class="sb-dot"></span>&nbsp;Connecté à http://127.0.0.1:5000 &nbsp;|&nbsp; Polling toutes les 1s &nbsp;|&nbsp; Mode Auto-Test (PoC)</div>
+        <div class="sb-pane" id="reading-count">Lectures : 0</div>
         <div class="sb-pane" id="sb-time">00:00:00</div>
       </div>
 
     </div>
   </div>
 
+  <!-- Taskbar -->
   <div id="taskbar">
     <button id="start-btn"><div class="start-orb"></div> start</button>
-    <div class="taskbar-btn">Challenge Objets Connectés K Posture Monitor</div>
-    <div id="tray"><span>🔊</span><span id="clock">24:00</span></div>
+    <div class="taskbar-btn">SmartPosture — CorpSafe v1</div>
+    <div id="tray"><span>🔊</span><span id="clock">12:00 PM</span></div>
   </div>
 
   <script>
@@ -378,6 +309,14 @@
       ]}, options: { ...opts }
     });
 
+    // Posture map — state → display config
+    const POSTURE_MAP = {
+      "DEBOUT":  { text: "Debout",  cls: "debout"  },
+      "ASSIS":   { text: "Assis",   cls: "assis"   },
+      "COUCHE":  { text: "Couché",  cls: "couche"  },
+      "INCONNU": { text: "Inconnu", cls: "inconnu" }
+    };
+
     function addPoint(chart, values) {
       chart.data.datasets.forEach((ds, i) => {
         ds.data.push(values[i]);
@@ -388,8 +327,8 @@
 
     function updateClock() {
       const now = new Date();
-      document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-      document.getElementById('sb-time').textContent = now.toLocaleTimeString();
+      document.getElementById('clock').textContent = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+      document.getElementById('sb-time').textContent = now.toLocaleTimeString('fr-FR');
     }
     setInterval(updateClock, 1000); updateClock();
 
@@ -399,7 +338,8 @@
         const readings = await res.json();
         if (!readings.length) return;
         const latest = readings[0];
-        const time = new Date(latest.timestamp).toLocaleTimeString();
+        const time = new Date(latest.timestamp).toLocaleTimeString('fr-FR');
+
         labels.push(time);
         if (labels.length > MAX_POINTS) labels.shift();
 
@@ -411,16 +351,15 @@
         document.getElementById('val-gz').textContent = latest.gz;
         document.getElementById('last-update').textContent = time;
 
+        const cfg = POSTURE_MAP[latest.posture] || POSTURE_MAP["INCONNU"];
         const led = document.getElementById('led');
         const lbl = document.getElementById('posture-label');
-        if (latest.posture === 'Bad Posture') {
-          led.className = 'led bad'; lbl.className = 'bad'; lbl.textContent = 'Mauvaise Posture';
-        } else {
-          led.className = 'led good'; lbl.className = 'good'; lbl.textContent = 'Bonne Posture';
-        }
+        led.className = 'led ' + cfg.cls;
+        lbl.className = cfg.cls;
+        lbl.textContent = cfg.text;
 
         readingCount++;
-        document.getElementById('reading-count').textContent = `Readings: ${readingCount}`;
+        document.getElementById('reading-count').textContent = `Lectures : ${readingCount}`;
         addPoint(accelChart, [latest.ax, latest.ay, latest.az]);
         addPoint(gyroChart, [latest.gx, latest.gy, latest.gz]);
       } catch(e) { console.error(e); }
@@ -430,58 +369,53 @@
     let pollInterval = setInterval(fetchData, 1000);
     fetchData();
 
-    document.getElementById("btn-refresh").addEventListener("click", () => {
-      fetchData();
-    });
+    document.getElementById('btn-refresh').addEventListener('click', () => fetchData());
 
-    document.getElementById("btn-pause").addEventListener("click", () => {
-      const btn = document.getElementById("btn-pause");
+    document.getElementById('btn-pause').addEventListener('click', () => {
+      const btn = document.getElementById('btn-pause');
       if (!paused) {
-        clearInterval(pollInterval);
-        paused = true;
-        btn.textContent = "25ba Resume";
-        document.querySelector(".sb-dot").style.background = "#cc8800";
+        clearInterval(pollInterval); paused = true;
+        btn.textContent = '▶ Reprendre';
+        document.querySelector('.sb-dot').style.background = '#cc8800';
       } else {
-        pollInterval = setInterval(fetchData, 1000);
-        paused = false;
-        btn.textContent = "23f8 Pause";
-        document.querySelector(".sb-dot").style.background = "#00aa00";
+        pollInterval = setInterval(fetchData, 1000); paused = false;
+        btn.textContent = '⏸ Pause';
+        document.querySelector('.sb-dot').style.background = '#00aa00';
         fetchData();
       }
     });
 
-    document.getElementById("btn-clear").addEventListener("click", () => {
+    document.getElementById('btn-clear').addEventListener('click', () => {
       labels.length = 0;
       accelChart.data.datasets.forEach(ds => ds.data = []);
       gyroChart.data.datasets.forEach(ds => ds.data = []);
-      accelChart.update();
-      gyroChart.update();
+      accelChart.update(); gyroChart.update();
       readingCount = 0;
-      document.getElementById("reading-count").textContent = "Readings: 0";
-      ["val-ax","val-ay","val-az","val-gx","val-gy","val-gz"].forEach(id => {
-        document.getElementById(id).textContent = "--";
+      document.getElementById('reading-count').textContent = 'Lectures : 0';
+      ['val-ax','val-ay','val-az','val-gx','val-gy','val-gz'].forEach(id => {
+        document.getElementById(id).textContent = '--';
       });
-      document.getElementById("last-update").textContent = "--:--:--";
+      document.getElementById('last-update').textContent = '--:--:--';
     });
 
-    document.getElementById("btn-export").addEventListener("click", async () => {
+    document.getElementById('btn-export').addEventListener('click', async () => {
       try {
-        const res = await fetch("http://127.0.0.1:5000/data");
+        const res = await fetch('http://127.0.0.1:5000/data');
         const readings = await res.json();
-        if (!readings.length) { alert("No data to export."); return; }
-        const header = "id,timestamp,ax,ay,az,gx,gy,gz,posture\n";
+        if (!readings.length) { alert('Aucune donnée à exporter.'); return; }
+        const header = 'id,timestamp,ax,ay,az,gx,gy,gz,posture\n';
         const rows = readings.map(r =>
-          r.id+","+r.timestamp+","+r.ax+","+r.ay+","+r.az+","+r.gx+","+r.gy+","+r.gz+","+r.posture
-        ).join("\n");
-        const blob = new Blob([header + rows], { type: "text/csv" });
+          `${r.id},${r.timestamp},${r.ax},${r.ay},${r.az},${r.gx},${r.gy},${r.gz},${r.posture}`
+        ).join('\n');
+        const blob = new Blob([header + rows], { type: 'text/csv' });
         const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
+        const a = document.createElement('a');
         a.href = url;
-        a.download = "mpu6050_" + new Date().toISOString().slice(0,19).replace(/:/g,"-") + ".csv";
+        a.download = 'smartposture_' + new Date().toISOString().slice(0,19).replace(/:/g,'-') + '.csv';
         a.click();
         URL.revokeObjectURL(url);
       } catch(e) {
-        alert("Export failed - make sure the API is running.");
+        alert('Export échoué — vérifiez que l\'API est en cours d\'exécution.');
       }
     });
   </script>

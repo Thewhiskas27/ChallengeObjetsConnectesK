@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import sqlite3
 import datetime
+import math
 
 app = Flask(__name__)
 CORS(app)
@@ -18,16 +19,29 @@ def init_db():
             gx INTEGER, gy INTEGER, gz INTEGER,
             posture TEXT
         )
-    ''')
+    ''') # ax, ay, az = Acceleromètre, gx, gy, gz = Gyroscope 
     conn.commit()
     conn.close()
 
 def detect_posture(ax, ay, az):
-    if abs(ax) > 8000 or abs(ay) > 8000:
-        return "Bad Posture"
-    return "Good Posture"
+    # Conversion en unités physiques (datasheet MPU-6050)
+    accelX = ax / 16384.0
+    accelY = ay / 16384.0
+    accelZ = az / 16384.0
 
-# --- API Routes ---
+    # Calcul des angles d'inclinaison
+    roll  = math.atan2(accelY, accelZ) * 180.0 / math.pi
+    pitch = math.atan2(-accelX, math.sqrt(accelY**2 + accelZ**2)) * 180.0 / math.pi
+
+    # Classification
+    if abs(pitch) < 15 and abs(roll) < 15:
+        return "DEBOUT"
+    if (50 < pitch < 130) or (50 < roll < 130):
+        return "ASSIS"
+    if abs(pitch) > 60 or abs(accelZ) < 0.3:
+        return "COUCHE"
+    return "INCONNU"
+
 @app.route('/data', methods=['POST'])
 def receive_data():
     data = request.json

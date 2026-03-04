@@ -10,7 +10,7 @@ def simulate_sensor_data():
     Une simulation de données MPU-6050 comme si elle venait d'un Arduino via Bluetooth.
     Dans un scénario de prod, ceci lirait les données comme une connection Serial/BLE réelle.
     """
-    bad_posture = random.random() < 0.3  # Ici, la chance d'une mauvaise posture est de 30%
+    bad_posture = random.random() < 0.3 
 
     if bad_posture:
         ax = random.randint(9000, 12000) * random.choice([-1, 1])
@@ -19,7 +19,7 @@ def simulate_sensor_data():
         ax = random.randint(-3000, 3000)
         ay = random.randint(-3000, 3000)
 
-    az = random.randint(14000, 18000)  # Z axis ~16384 en repos (1g)
+    az = random.randint(14000, 18000) 
     gx = random.randint(-500, 500)
     gy = random.randint(-500, 500)
     gz = random.randint(-500, 500)
@@ -40,4 +40,4 @@ if __name__ == '__main__':
     while True:
         data = simulate_sensor_data()
         send_data(data)
-        time.sleep(1)  # Envoi chaque seconde
+        time.sleep(1)
